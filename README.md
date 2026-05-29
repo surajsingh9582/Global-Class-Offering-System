@@ -25,8 +25,8 @@ The application is designed to scale under high concurrent booking traffic while
 ## 🛠️ Tech Stack Used
 
 | Component           | Technology                 |
-| ------------------- | -------------------------- |
-| Language            | Java 17                    |
+| ------------------- |----------------------------|
+| Language            | Java 21                    |
 | Framework           | Spring Boot                |
 | ORM                 | Spring Data JPA, Hibernate |
 | Database            | MySQL 8                    |
@@ -42,8 +42,8 @@ The application is designed to scale under high concurrent booking traffic while
 
 ### Prerequisites
 
-* Java 17 or above
-* Maven 3.x
+* Java 21 or above
+* Maven 4.x
 * MySQL 8.x
 * Git
 
