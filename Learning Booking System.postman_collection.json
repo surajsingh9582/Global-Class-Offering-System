@@ -9,16 +9,64 @@
     {
       "name": "offerings creation",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"courseId\": 2,\r\n  \"teacherId\": 4,\r\n  \"capacity\": 4,\r\n  \"sessions\": [\r\n    {\r\n      \"startTime\": \"2026-06-01T09:00:00Z\",\r\n      \"endTime\": \"2026-06-01T10:30:00Z\"\r\n    }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/teacher/offerings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "teacher",
+            "offerings"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "modifying offering",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\r\n    \"startTime\": \"2026-06-08T09:00:00Z\",\r\n    \"endTime\": \"2026-06-08T10:30:00Z\"\r\n  },\r\n  {\r\n    \"startTime\": \"2026-06-10T09:00:00Z\",\r\n    \"endTime\": \"2026-06-10T10:30:00Z\"\r\n  }\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/teacher/offerings/1/sessions",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "teacher",
+            "offerings",
+            "1",
+            "sessions"
+          ]
+        }
       },
       "response": []
     },
@@ -26,23 +74,98 @@
       "name": "Teacher offering",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/teacher/1/offerings?page=0&size=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "teacher",
+            "1",
+            "offerings"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "5"
+            }
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Parent Booking",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"parentId\": 2,\r\n  \"offeringId\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/parent/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "parent",
+            "bookings"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Available Offering",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/parent/offerings/available",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "parent",
+            "offerings",
+            "available"
+          ]
+        }
       },
       "response": []
     },
@@ -50,7 +173,32 @@
       "name": "Get All Booking",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/parent/1/bookings?page=0&size=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "parent",
+            "1",
+            "bookings"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "5"
+            }
+          ]
+        }
       },
       "response": []
     }
